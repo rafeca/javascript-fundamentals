@@ -1,5 +1,8 @@
-body {
+html {
   background-color: #1f2326;
+}
+
+body {
   font-family: 'Open Sans', 'Hevetica Neue', Helvetica, sans-serif;
   color: #fff;
   font-weight: 100;

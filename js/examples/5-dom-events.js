@@ -3,15 +3,11 @@
 
   global.exercises['The DOM']['Event Listeners'] = function () {
 
-    var topOfTheWindow = window.scrollY < 100;
-
     var handleScroll = function () {
-      if (window.scrollY < 100 && !topOfTheWindow) {
-        topOfTheWindow = true;
-        console.log('going to the top of the window');
-      } else if (window.scrollY >= 100 && topOfTheWindow) {
-        topOfTheWindow = false;
-        console.log('going to the bottom of the window');
+      if (window.scrollY < 500) {
+        document.body.style.background = '#006600';
+      } else if (window.scrollY >= 500) {
+        document.body.style.background = 'transparent';
       }
     };
 
@@ -22,10 +18,13 @@
       document.removeEventListener('scroll', handleScroll);
     }, 10000);
 
+
     // Exercise
     // --------
     // Implement a function that captures all the click events
-    // on any link element of the page and instead of executing
-    // the corresponding code, it prints the href attribute in the console
+    // on any link element of the page and prints the href attribute
+    // in the console.
+    //
+    // advanced step: also, when clicking on a link, disable any behaviour
   };
 })(window);

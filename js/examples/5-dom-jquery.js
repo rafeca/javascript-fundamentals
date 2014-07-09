@@ -44,5 +44,11 @@
     $.getJSON('https://api.spotify.com/v1/tracks/7Bxv0WL7UC6WwQpk9TzdMJ', function (data) {
       console.log(data);
     });
+
+    // exercise:
+    // ---------
+    // Print the number of links that each section has in the section title
+    // For example, the first section title should be:
+    // "Language basics (3)"
   };
 })(window, window.jQuery);

@@ -7,20 +7,19 @@
     var container = document.getElementById('exercises');
     container.style['background-color'] = 'grey';
 
-    var sections = container.children;
+    var links = container.querySelectorAll('a');
 
-    for (var i = 0; i < sections.length; i++) {
-      var title = sections[i].querySelector('h2');
-      var numItems = sections[i].querySelectorAll('a').length;
-
-      title.textContent += ' (' + numItems + ')';
+    for (var i = 0; i < links.length; i++) {
+      var title = links[i].textContent;
+      console.log(title);
     }
-
     container.style['background-color'] = 'transparent';
 
     // Exercise
     // --------
-    // Add the section title in each button. For example the first button
-    // should have the following text: "Primitive Types (Language Basics)"
+    // Print the number of links that each section has in the section title
+    // For example, the first section title should be:
+    // "Language basics (3)"
+    //
   };
 })(window);

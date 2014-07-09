@@ -1,43 +1,44 @@
 (function (global) {
-  //'use strict';
+  'use strict';
 
   global.exercises['Functions']['Context (this)'] = function () {
     var value;
 
-    var calcFullName = function (separator) {
-      return this.firstName + separator + this.lastName;
+    var myFunction = function () {
+      console.log(this);
     };
 
     // Direct invocation
-    value = calcFullName(' ');
+    value = myFunction();
 
     // Using call/apply
-    var user = {
-      firstName: 'John',
-      lastName: 'Doe'
+    var obj = {
+      param: 'hey'
     };
-    value = calcFullName.call(user, ' ');
-    value = calcFullName.apply(user, [' ']);
+    value = myFunction.call(obj, '');
+    value = myFunction.apply(obj, ['']);
 
     // Using "bind"
-    var calcUserFullName = calcFullName.bind(user);
-    calcUserFullName(' ');
+    var myBoundFn = myFunction.bind(obj);
+    myBoundFn();
 
-    user.calcFullName = calcFullName;
+    obj.myFunction = myFunction;
 
     // calling an object's function
-    value = user.calcFullName(' ');
+    value = obj.myFunction();
 
     // Using constructor
-    value = new calcFullName(' ');
+    value = new myFunction();
 
     // Exercise:
     // ---------
-    // Implement the simple bind function that takes two arguments:
-    // function and object to bind
-    // and returns the bound function
+    // Having the following function:
     //
-    // var myBoundFn = bindFunction(myFn, context);
+    // var printFullName = function (separator) {
+    //  console.log(this.firstName + separator + this.lastName);
+    // };
+    //
+    // call the function in a way that it prints "John Doe"
   };
 
 })(this);

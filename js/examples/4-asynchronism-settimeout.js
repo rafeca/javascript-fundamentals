@@ -20,8 +20,10 @@
 
     // Exercise:
     // ---------
-    // Create a function called printItems that accepts an array and
-    // prints an item of the array every second.
+    // Create a function called printNumbers prints a number every second.
+    // printNumbers(5);
+    //
+    // will print 1, 2, 3, 4
   };
 
 })(this);
