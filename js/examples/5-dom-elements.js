@@ -7,13 +7,18 @@
     var container = document.getElementById('exercises');
     container.style['background-color'] = 'grey';
 
+    console.log(container);
+
     var links = container.querySelectorAll('a');
 
     for (var i = 0; i < links.length; i++) {
       var title = links[i].textContent;
       console.log(title);
     }
-    container.style['background-color'] = 'transparent';
+
+    setTimeout(function () {
+      container.style['background-color'] = 'transparent';
+    }, 10000);
 
     // Exercise
     // --------

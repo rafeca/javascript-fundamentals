@@ -20,10 +20,10 @@
 
     // Exercise:
     // ---------
-    // Create a function called printNumbers prints a number every second.
-    // printNumbers(5);
+    // Create a function that prints a number every second.
+    // printNumbers();
     //
-    // will print 1, 2, 3, 4
+    // will print 0, 1, 2, 3, 4, 5, ...
   };
 
 })(this);

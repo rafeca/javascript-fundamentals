@@ -5,9 +5,9 @@
 
     var handleScroll = function () {
       if (window.scrollY < 500) {
-        document.body.style.background = '#006600';
+        document.body.style['background-color'] = '#006600';
       } else if (window.scrollY >= 500) {
-        document.body.style.background = 'transparent';
+        document.body.style['background-color'] = 'transparent';
       }
     };
 
