@@ -19,7 +19,7 @@
 
     xhr.onload = function () {
       if (this.status === 200) { // the result is OK
-        var response = JSON.parse(this.response);
+        var response = JSON.parse(xhr.response);
         console.log('onload response', response);
       }
     };
